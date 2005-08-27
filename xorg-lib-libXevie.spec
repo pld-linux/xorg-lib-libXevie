@@ -17,8 +17,6 @@ BuildRequires:	xorg-proto-evieext-devel
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-
 %description
 X Evie extension library.
 
