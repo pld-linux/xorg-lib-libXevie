@@ -1,5 +1,3 @@
-# $Rev: 3305 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	X Evie extension library
 Summary(pl):	Biblioteka rozszerzenia X Evie
 Name:		xorg-lib-libXevie
@@ -12,12 +10,12 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXevie-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-proto-evieext-devel
-BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-proto-evieext-devel
 BuildRequires:	xorg-util-util-macros
-BuildRoot:	%{tmpdir}/libXevie-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -27,14 +25,13 @@ X Evie extension library.
 %description -l pl
 Biblioteka rozszerzenia X Evie.
 
-
 %package devel
 Summary:	Header files libXevie development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXevie
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXevie = %{version}-%{release}
-Requires:	xorg-proto-evieext-devel
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
+Requires:	xorg-proto-evieext-devel
 
 %description devel
 X Evie extension library
@@ -48,12 +45,11 @@ Biblioteka rozszerzenia X Evie.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXevie.
 
-
 %package static
-Summary:	Static libXevie libraries
-Summary(pl):	Biblioteki statyczne libXevie
-Group:		Development/Libraries
-Requires:	xorg-lib-libXevie-devel = %{version}-%{release}
+Summary:	Static libXevie library
+Summary(pl):	Biblioteka statyczna libXevie
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 X Evie extension library
@@ -65,10 +61,8 @@ Biblioteka rozszerzenia X Evie.
 
 Pakiet zawiera statyczn± bibliotekê libXevie.
 
-
 %prep
 %setup -q -n libXevie-%{version}
-
 
 %build
 %{__libtoolize}
@@ -80,7 +74,6 @@ Pakiet zawiera statyczn± bibliotekê libXevie.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -88,28 +81,23 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXevie.so.*
-
+%attr(755,root,root) %{_libdir}/libXevie.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libXevie.so
 %{_libdir}/libXevie.la
-%attr(755,root,wheel) %{_libdir}/libXevie.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xevie.pc
-
 
 %files static
 %defattr(644,root,root,755)
