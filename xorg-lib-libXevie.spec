@@ -1,4 +1,4 @@
-# $Rev: 3305 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3305 $, $Date: 2005-08-27 17:42:48 $
 #
 Summary:	X Evie extension library
 Summary(pl):	Biblioteka rozszerzenia X Evie
@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-proto-evieext-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/libXevie-%{version}-root-%(id -u -n)
 
