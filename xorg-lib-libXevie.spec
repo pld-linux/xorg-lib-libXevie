@@ -24,8 +24,8 @@ X Evie extension library.
 Biblioteka rozszerzenia X Evie.
 
 %package devel
-Summary:	Header files libXevie development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXevie
+Summary:	Header files for libXevie library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXevie
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -35,7 +35,7 @@ Requires:	xorg-proto-evieext-devel
 X Evie extension library
 
 This package contains the header files needed to develop programs that
-use these libXevie.
+use libXevie.
 
 %description devel -l pl
 Biblioteka rozszerzenia X Evie.
