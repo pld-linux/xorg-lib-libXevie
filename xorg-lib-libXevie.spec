@@ -1,12 +1,12 @@
 Summary:	X Evie extension library
 Summary(pl):	Biblioteka rozszerzenia X Evie
 Name:		xorg-lib-libXevie
-Version:	0.99.2
+Version:	0.99.3
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXevie-%{version}.tar.bz2
-# Source0-md5:	ab940b135c9546598feb9b2d31b1ea12
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXevie-%{version}.tar.bz2
+# Source0-md5:	b3ddbc0170b987278a213a51df15bc99
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-evieext-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -77,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
