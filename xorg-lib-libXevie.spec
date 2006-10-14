@@ -1,12 +1,12 @@
 Summary:	X Evie extension library
 Summary(pl):	Biblioteka rozszerzenia X Evie
 Name:		xorg-lib-libXevie
-Version:	1.0.1
-Release:	0.1
+Version:	1.0.2
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXevie-%{version}.tar.bz2
-# Source0-md5:	a8d6d20ad665aefda75f6543325af72c
+# Source0-md5:	88e9bf535364e7c821ef4014fb1ca2dd
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
