@@ -1,5 +1,5 @@
 Summary:	X Evie extension library
-Summary(pl):	Biblioteka rozszerzenia X Evie
+Summary(pl.UTF-8):   Biblioteka rozszerzenia X Evie
 Name:		xorg-lib-libXevie
 Version:	1.0.2
 Release:	3
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Evie extension library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka rozszerzenia X Evie.
 
 %package devel
 Summary:	Header files for libXevie library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXevie
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXevie
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,15 +37,15 @@ X Evie extension library
 This package contains the header files needed to develop programs that
 use libXevie.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka rozszerzenia X Evie.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXevie.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXevie.
 
 %package static
 Summary:	Static libXevie library
-Summary(pl):	Biblioteka statyczna libXevie
+Summary(pl.UTF-8):   Biblioteka statyczna libXevie
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,10 +54,10 @@ X Evie extension library
 
 This package contains the static libXevie library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka rozszerzenia X Evie.
 
-Pakiet zawiera statyczn± bibliotekê libXevie.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXevie.
 
 %prep
 %setup -q -n libXevie-%{version}
