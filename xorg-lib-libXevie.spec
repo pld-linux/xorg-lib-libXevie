@@ -1,5 +1,5 @@
 Summary:	X Evie extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia X Evie
+Summary(pl.UTF-8):	Biblioteka rozszerzenia X Evie
 Name:		xorg-lib-libXevie
 Version:	1.0.2
 Release:	3
@@ -25,7 +25,7 @@ Biblioteka rozszerzenia X Evie.
 
 %package devel
 Summary:	Header files for libXevie library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXevie
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXevie
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -45,7 +45,7 @@ używających biblioteki libXevie.
 
 %package static
 Summary:	Static libXevie library
-Summary(pl.UTF-8):   Biblioteka statyczna libXevie
+Summary(pl.UTF-8):	Biblioteka statyczna libXevie
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
