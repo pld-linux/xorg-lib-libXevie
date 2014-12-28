@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXevie.la
 %{_includedir}/X11/extensions/Xevie.h
 %{_pkgconfigdir}/xevie.pc
-%{_mandir}/man3/Xevie*.3x*
+%{_mandir}/man3/Xevie*.3*
 
 %files static
 %defattr(644,root,root,755)
